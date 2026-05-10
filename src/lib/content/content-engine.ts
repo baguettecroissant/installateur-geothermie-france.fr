@@ -135,18 +135,18 @@ function buildPricingContext(city: City, pop: number, climateLabel: string): str
     const region = city.region;
     
     if (pop > 200000) {
-        return `En tant que métropole, ${city.name} présente des tarifs d'installation géothermique parmi les plus élevés du ${dept}. Les contraintes logistiques (accès chantier, autorisations de voirie, voisinage) génèrent un surcoût de 15 à 25% par rapport à la moyenne nationale. Cependant, la densité d'installateurs certifiés en ${region} permet de négocier et d'obtenir des devis compétitifs. Le captage vertical est quasi-systématique en raison de la taille réduite des terrains. Les aides financières (MaPrimeRénov' + CEE) compensent efficacement ce surcoût : le reste à charge après aides reste dans la moyenne nationale.`;
+        return `À ${city.name}, le choix de l'installateur géothermique est décisif : plus de 15 entreprises RGE interviennent dans la métropole, mais seules celles maîtrisant le forage urbain (foreuse compacte, gestion de voirie) sont adaptées. Exigez un artisan ayant réalisé au minimum 20 chantiers en milieu métropolitain dense dans le ${dept}. En ${region}, les installateurs agréés par les grandes marques (Viessmann, NIBE, Daikin) offrent les garanties étendues et le SAV le plus structuré.`;
     }
     if (pop > 50000) {
-        return `À ${city.name}, les tarifs d'installation géothermique sont légèrement supérieurs à la moyenne du ${dept}, avec un surcoût de 5 à 15% lié aux contraintes urbaines. En ${region}, zone ${climateLabel.toLowerCase()}, le réseau d'installateurs RGE est suffisamment dense pour maintenir une concurrence saine. Le choix entre captage vertical et horizontal dépend de votre terrain — les deux solutions sont régulièrement mises en œuvre. Profitez de la présence de plusieurs professionnels pour comparer les offres et les technologies proposées (PAC sol-eau, eau-eau, avec ou sans géocooling).`;
+        return `À ${city.name}, 5 à 15 installateurs RGE QualiPAC interviennent dans un rayon de 30 km. En ${region}, zone ${climateLabel.toLowerCase()}, cette densité d'artisans permet de comparer les approches techniques et les devis. Les critères de choix essentiels dans le ${dept} : expérience en forage (vertical et/ou horizontal), marques de PAC maîtrisées, délai d'intervention SAV garanti, et contrat de maintenance proposé. Les meilleurs installateurs offrent une visite technique gratuite.`;
     }
     if (pop > 10000) {
-        return `${city.name} bénéficie de tarifs proches de la moyenne nationale pour l'installation géothermique. En ${region}, ${climateLabel.toLowerCase()}, les installateurs du ${dept} proposent des prix compétitifs grâce à des conditions de chantier favorables (accès terrain, espace disponible). Le rapport qualité-prix est optimal dans les villes de cette taille : vous bénéficiez de l'expertise des professionnels tout en évitant les surcoûts métropolitains.`;
+        return `${city.name} bénéficie d'un réseau d'installateurs géothermiques RGE de bonne densité. En ${region}, les artisans du ${dept} proposent des installations de qualité avec un suivi personnalisé. Comparez 3 à 5 devis en évaluant : la qualité de l'étude thermique préalable, l'expérience sur votre type de sol, les marques de PAC proposées, et les conditions de garantie (décennale + constructeur).`;
     }
     if (pop > 2000) {
-        return `Dans les communes comme ${city.name}, les prix sont souvent plus avantageux que dans les grandes villes du ${dept}. Les installateurs locaux en ${region} proposent des tarifs 5 à 15% inférieurs à la moyenne nationale, avec l'avantage d'un suivi de proximité. Le captage horizontal, possible sur les terrains spacieux de cette commune, permet de réduire encore le budget de 3 000 à 5 000€ par rapport au forage vertical.`;
+        return `Dans les communes comme ${city.name}, les installateurs locaux du ${dept} offrent un service de proximité très apprécié : connaissance du terrain, réactivité de dépannage, et suivi personnalisé. En ${region}, ces artisans travaillent souvent en binôme avec un foreur partenaire régulier. L'avantage : une coordination rodée qui garantit la qualité du chantier et des tarifs 5 à 15% inférieurs aux grandes structures.`;
     }
-    return `En commune rurale comme ${city.name}, vous bénéficiez des tarifs les plus compétitifs du ${dept} pour la géothermie. Les foreurs locaux en ${region} proposent des prix attractifs, et la disponibilité foncière permet d'opter pour le captage horizontal — la solution la plus économique. Le principal poste de coût à anticiper est le déplacement du foreur si aucun professionnel n'est basé à proximité immédiate (surcoût de 500 à 1 000€).`;
+    return `En commune rurale comme ${city.name}, le réseau d'installateurs RGE est plus restreint dans le ${dept} — comptez 2 à 4 artisans certifiés dans un rayon de 40 km. L'avantage de ces installateurs de proximité en ${region} : une connaissance approfondie du sous-sol local, un suivi personnalisé et une réactivité de dépannage rapide. Le principal critère de choix reste l'expérience en forage géothermique (minimum 5 chantiers recommandés).`;
 }
 
 function buildFaq(city: City, pop: number, saisonTravaux: string): FaqItem[] {
@@ -155,46 +155,46 @@ function buildFaq(city: City, pop: number, saisonTravaux: string): FaqItem[] {
 
     return [
         {
-            question: `Combien coûte une installation géothermique à ${city.name} ?`,
+            question: `Comment trouver un installateur géothermique RGE à ${city.name} ?`,
             answer: pop > 200000
-                ? `À ${city.name}, le prix moyen d'une installation géothermique complète (forage + PAC + raccordements) se situe entre 18 000€ et 35 000€. Les tarifs sont 15 à 25% supérieurs à la moyenne nationale en raison des contraintes logistiques métropolitaines. Après déduction des aides (MaPrimeRénov' + CEE), le reste à charge descend entre 8 000€ et 20 000€.`
+                ? `Pour trouver un installateur RGE à ${city.name}, consultez l'annuaire officiel france-renov.gouv.fr (filtrez par "PAC géothermique" et "${dept}"). En métropole, ciblez les artisans avec une expérience documentée en forage urbain (foreuse compacte, gestion de voirie). Vérifiez la certification sur qualit-enr.org. Demandez 3 à 5 devis avec portfolio de chantiers urbains.`
                 : pop > 50000
-                    ? `À ${city.name}, le prix moyen d'une installation géothermique complète se situe entre 15 000€ et 30 000€. Les tarifs sont proches de la moyenne nationale. Après déduction des aides financières (MaPrimeRénov' jusqu'à 11 000€ + CEE jusqu'à 4 000€), le reste à charge est de 6 000€ à 18 000€.`
+                    ? `Recherchez les installateurs RGE QualiPAC à ${city.name} sur france-renov.gouv.fr et qualit-enr.org. Comparez 3 artisans sur les critères : nombre de chantiers géothermiques dans le ${dept}, marques de PAC proposées, et conditions de garantie. Un bon installateur propose une visite technique gratuite d'1h30 minimum.`
                     : pop > 10000
-                        ? `À ${city.name}, le prix moyen d'une installation géothermique se situe entre 14 000€ et 28 000€, conforme à la moyenne nationale. Les installateurs locaux et les réseaux de marques proposent des tarifs compétitifs. Avec les aides, le reste à charge peut descendre sous 10 000€.`
-                        : `À ${city.name}, le prix moyen d'une installation géothermique se situe entre 13 000€ et 25 000€. Les tarifs sont légèrement inférieurs à la moyenne nationale. Le captage horizontal, possible si vous disposez de terrain, réduit le coût de 3 000 à 5 000€ par rapport au forage vertical.`
+                        ? `Les installateurs RGE autour de ${city.name} sont référencés sur france-renov.gouv.fr. Demandez 3 devis à des artisans certifiés QualiPAC dans le ${dept}. Vérifiez les avis clients en ligne et les références de chantiers locaux. Le bouche-à-oreille est un excellent indicateur de qualité.`
+                        : `Autour de ${city.name}, les installateurs RGE sont moins nombreux mais souvent plus expérimentés. Consultez france-renov.gouv.fr pour le ${dept}. Demandez des références locales et visitez un chantier si possible. Les artisans de proximité offrent le meilleur suivi.`
         },
         {
-            question: `Quel type de captage géothermique choisir à ${city.name} ?`,
+            question: `Quelles certifications vérifier pour un installateur à ${city.name} ?`,
+            answer: `Trois certifications sont essentielles pour un installateur géothermique à ${city.name} (${dept}) : 1) RGE QualiPAC mention "PAC géothermique" (vérifiable sur qualit-enr.org), 2) Assurance décennale couvrant explicitement le forage géothermique et l'installation de PAC, 3) QualiForage pour le foreur (vérifiable sur qualiforage.org). Exigez les copies de ces documents avant de signer le devis.`
+        },
+        {
+            question: `Combien de devis demander pour la géothermie à ${city.name} ?`,
+            answer: `Demandez au minimum 3 devis d'installateurs RGE différents à ${city.name} et dans le ${dept}. ${saisonTravaux} Comparez-les ligne par ligne : marque et modèle de PAC, type de captage, longueur de forage, raccordements, mise en service, et conditions de garantie. Les écarts de prix entre artisans atteignent 15 à 30% pour un même projet — la mise en concurrence est indispensable en ${region}.`
+        },
+        {
+            question: `Quel est le délai d'intervention d'un installateur à ${city.name} ?`,
             answer: pop > 50000
-                ? `À ${city.name}, le captage vertical par sondes géothermiques (80-150 m de profondeur) est le plus courant car il ne nécessite que peu d'espace. Si votre terrain le permet et que le sous-sol est favorable dans le ${dept}, le captage horizontal (nappe de collecteurs à 1,2 m de profondeur) est 30 à 40% moins cher. L'aquathermie (sur nappe phréatique) est aussi envisageable selon la ressource en eau locale.`
-                : `À ${city.name}, le choix entre captage vertical et horizontal dépend de votre terrain. Le captage horizontal nécessite une surface libre de 1,5 à 2 fois la surface habitable. Le captage vertical (sondes de 80-150 m) s'adapte à tous les terrains mais coûte 3 000 à 5 000€ de plus. Un foreur qualifié dans le ${dept} vous conseillera après étude du sol.`
+                ? `À ${city.name}, le délai entre le premier contact et le début du chantier est de 2 à 4 mois en 2026 (forte demande). La visite technique est réalisée sous 1-2 semaines, le devis envoyé sous 5-10 jours. Le chantier dure 4 à 7 jours. Après mise en service, le SAV contractuel garantit une intervention sous 24 à 48h dans le ${dept}.`
+                : `Autour de ${city.name}, comptez 1 à 3 mois entre la signature du devis et le début du chantier. Les installateurs du ${dept} sont chargés — anticipez. Le chantier dure 3 à 5 jours. Le SAV est assuré sous 24 à 72h selon la distance de l'artisan.`
         },
         {
-            question: `La géothermie est-elle rentable à ${city.name} ?`,
-            answer: `Oui, la géothermie est le système de chauffage le plus rentable à long terme à ${city.name}. ${saisonTravaux} En remplacement du fioul, l'économie annuelle atteint 1 500 à 2 000€/an. En remplacement du gaz, 800 à 1 200€/an. L'amortissement est de 8 à 12 ans, et la durée de vie du système dépasse 25 ans (50 ans pour les sondes).`
+            question: `Comment reconnaître un bon installateur géothermique à ${city.name} ?`,
+            answer: `Un bon installateur géothermique à ${city.name} se reconnaît à 5 signes : 1) Il réalise une visite technique approfondie (1h30 min, gratuite), 2) Il fournit une étude thermique certifiée avant le devis, 3) Il propose un engagement de performance (SCOP garanti), 4) Il montre un portfolio de chantiers locaux dans le ${dept}, 5) Il propose un contrat de maintenance annuel. Méfiez-vous des devis envoyés sans visite préalable.`
         },
         {
-            question: `Quelles aides pour la géothermie à ${city.name} en 2026 ?`,
-            answer: `Les aides financières pour la géothermie à ${city.name} (${dept}) sont les plus généreuses du secteur de la rénovation énergétique : MaPrimeRénov' (jusqu'à 11 000€ pour les ménages très modestes), Certificats d'Économies d'Énergie – CEE (jusqu'à 4 000€), TVA réduite à 5,5%, éco-PTZ (jusqu'à 50 000€ à taux zéro), et éventuellement des aides locales du département ${dept} ou de la région ${region}. Au total, jusqu'à 15 000€ d'aides cumulables.`
+            question: `Que couvre la garantie décennale d'un installateur à ${city.name} ?`,
+            answer: `La garantie décennale de votre installateur à ${city.name} couvre pendant 10 ans tous les dommages compromettant la solidité de l'installation ou la rendant impropre à sa destination : fuite du circuit géothermique, défaut de forage, affaissement des sondes, dommage structurel. Vérifiez que l'attestation couvre spécifiquement "forage géothermique et installation PAC sol-eau". Les artisans du ${dept} en ${region} fournissent cette attestation sur simple demande.`
         },
         {
-            question: `Faut-il une autorisation pour un forage géothermique à ${city.name} ?`,
-            answer: `Oui, tout forage géothermique à ${city.name} nécessite une déclaration préalable auprès de la DREAL (formulaire en ligne sur le site du BRGM). Pour les forages de moins de 10 m, une simple déclaration suffit. Pour les forages de plus de 10 m (sondes verticales), un dossier plus complet est requis avec un délai de traitement de 1 à 2 mois dans le ${dept}. Votre installateur RGE se charge généralement des formalités.`
-        },
-        {
-            question: `Combien de temps durent les travaux de géothermie à ${city.name} ?`,
+            question: `Quel contrat de maintenance choisir à ${city.name} ?`,
             answer: pop > 50000
-                ? `À ${city.name}, comptez 4 à 7 jours ouvrés pour l'ensemble du chantier (forage + installation PAC + raccordements). Le forage vertical dure 1 à 2 jours, la pose de la PAC et les raccordements hydrauliques/électriques 2 à 3 jours. En zone urbaine, les autorisations administratives peuvent ajouter 1 à 2 mois de délai. Planifiez votre projet 3 à 4 mois avant la saison de chauffe.`
-                : `À ${city.name}, comptez 3 à 5 jours ouvrés pour l'installation complète. Le forage vertical dure 1 à 2 jours, le captage horizontal 2 à 3 jours. La mise en service est immédiate après le raccordement. Prévoyez 2 à 3 mois entre le premier devis et le début des travaux.`
+                ? `À ${city.name}, un contrat de maintenance géothermique coûte 200 à 400€/an et inclut : visite annuelle de contrôle, vérification du circuit frigorifique, nettoyage des filtres, test de performance (SCOP), et dépannage prioritaire sous 24h. Les installateurs du ${dept} proposent des forfaits 3 ou 5 ans avec remise de 10-20%. Sans contrat, une intervention coûte 80-120€/h.`
+                : `Un contrat de maintenance à ${city.name} coûte 150 à 300€/an incluant une visite annuelle et le dépannage prioritaire. Les artisans locaux du ${dept} proposent un SAV de proximité réactif. Un contrat 3 ou 5 ans est plus avantageux (réduction 10-20%). Les sondes géothermiques ne nécessitent aucun entretien pendant 50 ans.`
         },
         {
-            question: `Quelle est la durée de vie d'une installation géothermique à ${city.name} ?`,
-            answer: `Une installation géothermique à ${city.name} a une durée de vie exceptionnelle. La pompe à chaleur (PAC) fonctionne 25 à 30 ans avec un entretien annuel (150 à 300€/an). Les sondes géothermiques enterrées dans le sous-sol du ${dept} durent 50 ans et plus — elles survivent à la PAC et peuvent être réutilisées lors d'un remplacement. C'est un investissement patrimonial qui se transmet avec la maison.`
-        },
-        {
-            question: `La géothermie fonctionne-t-elle aussi pour le rafraîchissement à ${city.name} ?`,
-            answer: `Oui, la géothermie offre le "géocooling" : en été, la température du sous-sol à ${city.name} (12-14°C) est naturellement inférieure à la température extérieure. La PAC géothermique réversible peut rafraîchir votre logement à moindre coût — bien moins cher qu'une climatisation classique. En ${region}, cette double fonction chauffage/rafraîchissement accélère le retour sur investissement de votre installation.`
+            question: `Peut-on changer d'installateur pour la maintenance à ${city.name} ?`,
+            answer: `Oui, vous pouvez choisir un autre artisan RGE pour la maintenance de votre PAC géothermique à ${city.name}. La garantie constructeur (2-5 ans) reste valide si l'entretien est réalisé par un professionnel certifié. La garantie décennale (10 ans) n'est pas impactée par le choix du mainteneur. Dans le ${dept} en ${region}, plusieurs installateurs RGE proposent des contrats de maintenance pour des PAC qu'ils n'ont pas installées.`
         },
     ];
 }
