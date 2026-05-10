@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `Installateurs Géothermie à ${city.name} (${city.zip})`,
     description: `L'annuaire pour trouver le meilleur installateur géothermique à ${city.name} (${city.zip}). Consultez les professionnels RGE et demandez un devis.`,
     alternates: {
-      canonical: `https://www.cout-geothermie.fr/annuaire/${slug}`,
+      canonical: `https://www.installateur-geothermie-france.fr/annuaire/${slug}`,
     },
   };
 }

@@ -16,7 +16,7 @@ export const brands: Brand[] = [
   {
     slug: "viessmann",
     name: "Viessmann",
-    description: "Leader européen du chauffage, Viessmann est la référence en PAC géothermique avec la gamme Vitocal. Qualité allemande, fiabilité reconnue.",
+    description: "Viessmann dispose du réseau d'installateurs partenaires le plus dense de France. Formation certifiante de 5 jours pour chaque artisan agréé. SAV en 24h.",
     origin: "Allemagne (fondé en 1917)",
     gamme: "Haut de gamme",
     budget: "10 000 – 16 000€ (PAC seule)",
@@ -24,7 +24,7 @@ export const brands: Brand[] = [
     modeles_phares: ["Vitocal 300-G (sol-eau, référence)", "Vitocal 200-G (entrée de gamme)", "Vitocal 350-G (haute puissance, collectif)"],
     garantie: "5 ans pièces (extensible à 10 ans)",
     certification: "NF PAC, EcoDesign, QualiPAC",
-    content: "Viessmann est le choix de référence pour les installations géothermiques résidentielles en France et en Europe. La gamme Vitocal 300-G offre un COP de 4,8 à 5,2 en conditions normalisées, avec un compresseur Scroll EVI capable de produire de l'eau à 65°C pour les rénovations conservant des radiateurs haute température. La marque dispose du réseau d'installateurs partenaires le plus dense de France."
+    content: "Le programme Viessmann Partner garantit un niveau d'expertise vérifié chez chaque installateur agréé. Formation continue, outils de diagnostic embarqués et support technique dédié. La gamme Vitocal 300-G offre un COP de 4,8 à 5,2 en conditions normalisées, avec un compresseur Scroll EVI capable de produire de l'eau à 65°C pour les rénovations conservant des radiateurs haute température. La marque dispose du réseau d'installateurs partenaires le plus dense de France."
   },
   {
     slug: "nibe",
