@@ -1,12 +1,12 @@
 import { IconTool } from "@tabler/icons-react";
 
 const POPULAR_GUIDES = [
-    { slug: "prix-geothermie-2026", title: "Prix Géothermie 2026" },
-    { slug: "captage-vertical-vs-horizontal", title: "Vertical vs Horizontal" },
-    { slug: "forage-geothermique", title: "Forage Géothermique" },
-    { slug: "maprimerenov-geothermie-2026", title: "MaPrimeRénov' 2026" },
-    { slug: "cop-geothermique", title: "COP Géothermique" },
-    { slug: "entretien-pac-geothermique", title: "Entretien PAC" },
+    { slug: "choisir-installateur-rge", title: "Choisir un installateur RGE" },
+    { slug: "comparer-devis-geothermie", title: "Comparer les devis" },
+    { slug: "etapes-installation-pac", title: "Étapes d'installation" },
+    { slug: "arnaques-pompe-a-chaleur-1-euro", title: "Éviter les arnaques" },
+    { slug: "garantie-decennale-forage", title: "Garanties & Assurances" },
+    { slug: "entretien-maintenance-pac", title: "Entretien & Maintenance" },
 ];
 const TOP_CITIES = [
     { slug: "paris-75001", name: "Paris" }, { slug: "lyon-69001", name: "Lyon" }, { slug: "marseille-13001", name: "Marseille" },

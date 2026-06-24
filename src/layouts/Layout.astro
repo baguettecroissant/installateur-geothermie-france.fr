@@ -15,6 +15,9 @@ const {
   canonical = "https://www.installateur-geothermie-france.fr",
 } = Astro.props;
 
+const pathname = Astro.url.pathname;
+const isDevisPage = pathname.replace(/\/$/, "") === "/devis";
+
 const BASE_URL = "https://www.installateur-geothermie-france.fr";
 const formattedTitle = title.includes("installateur-geothermie-france.fr") ? title : `${title} | installateur-geothermie-france.fr`;
 
@@ -82,11 +85,29 @@ const schemaOrg = {
 
     <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
   </head>
-  <body class="font-sans antialiased bg-bg text-text min-h-screen flex flex-col">
+  <body class={`font-sans antialiased bg-bg text-text min-h-screen flex flex-col ${!isDevisPage ? "pb-20 md:pb-0" : ""}`}>
     <Header client:load />
     <main class="flex-1">
       <slot />
     </main>
     <Footer />
+
+    {!isDevisPage && (
+      <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-sm border-t border-stone-200/80 p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex items-center justify-between px-5 pb-[calc(12px+env(safe-area-inset-bottom,0px))]">
+        <div class="flex flex-col">
+          <span class="text-[10px] text-stone-500 font-bold uppercase tracking-wider">Artisans RGE 2026</span>
+          <span class="text-xs font-bold text-primary">Devis gratuit sous 48h</span>
+        </div>
+        <a
+          href="/devis"
+          class="bg-accent hover:bg-amber-700 text-white text-xs font-bold px-5 py-3 rounded-lg shadow-md flex items-center gap-1.5 transition-all active:scale-95"
+        >
+          Trouver un Artisan
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    )}
   </body>
 </html>
