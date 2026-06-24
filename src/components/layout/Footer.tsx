@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { IconTool } from "@tabler/icons-react";
 
 const POPULAR_GUIDES = [
@@ -32,32 +31,32 @@ export function Footer() {
                         <p className="text-amber-200 text-sm leading-relaxed max-w-sm">
                             Annuaire des installateurs géothermiques RGE certifiés en France. Trouvez un artisan qualifié près de chez vous dans plus de 35 000 communes.
                         </p>
-                        <Link href="/devis" className="inline-block mt-6 bg-accent hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg text-sm transition-colors">
+                        <a href="/devis" className="inline-block mt-6 bg-accent hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg text-sm transition-colors">
                             Trouver un artisan →
-                        </Link>
+                        </a>
                     </div>
                     <div>
                         <h4 className="text-base font-semibold text-white mb-4 font-heading">Navigation</h4>
                         <ul className="space-y-2">
-                            <li><Link href="/" className="text-amber-200 hover:text-accent transition-colors text-sm">Accueil</Link></li>
-                            <li><Link href="/guides" className="text-amber-200 hover:text-accent transition-colors text-sm">Guides &amp; Conseils</Link></li>
-                            <li><Link href="/marques" className="text-amber-200 hover:text-accent transition-colors text-sm">Marques PAC</Link></li>
-                            <li><Link href="/annuaire" className="text-amber-200 hover:text-accent transition-colors text-sm">Annuaire Installateurs</Link></li>
-                            <li><Link href="/faq" className="text-amber-200 hover:text-accent transition-colors text-sm">FAQ</Link></li>
-                            <li><Link href="/devis" className="text-amber-200 hover:text-accent transition-colors text-sm">Trouver un Artisan</Link></li>
-                            <li><Link href="/mentions-legales" className="text-amber-200 hover:text-accent transition-colors text-sm">Mentions Légales</Link></li>
+                            <li><a href="/" className="text-amber-200 hover:text-accent transition-colors text-sm">Accueil</a></li>
+                            <li><a href="/guides" className="text-amber-200 hover:text-accent transition-colors text-sm">Guides &amp; Conseils</a></li>
+                            <li><a href="/marques" className="text-amber-200 hover:text-accent transition-colors text-sm">Marques PAC</a></li>
+                            <li><a href="/annuaire" className="text-amber-200 hover:text-accent transition-colors text-sm">Annuaire Installateurs</a></li>
+                            <li><a href="/faq" className="text-amber-200 hover:text-accent transition-colors text-sm">FAQ</a></li>
+                            <li><a href="/devis" className="text-amber-200 hover:text-accent transition-colors text-sm">Trouver un Artisan</a></li>
+                            <li><a href="/mentions-legales" className="text-amber-200 hover:text-accent transition-colors text-sm">Mentions Légales</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-base font-semibold text-white mb-4 font-heading">Guides Populaires</h4>
                         <ul className="space-y-2">
-                            {POPULAR_GUIDES.map(g => (<li key={g.slug}><Link href={`/guides/${g.slug}`} className="text-amber-200 hover:text-accent transition-colors text-sm">{g.title}</Link></li>))}
+                            {POPULAR_GUIDES.map(g => (<li key={g.slug}><a href={`/guides/${g.slug}`} className="text-amber-200 hover:text-accent transition-colors text-sm">{g.title}</a></li>))}
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-base font-semibold text-white mb-4 font-heading">Marques PAC Géothermiques</h4>
                         <ul className="space-y-2">
-                            {PAC_BRANDS.map(b => (<li key={b.slug}><Link href={`/marques/${b.slug}`} className="text-amber-200 hover:text-accent transition-colors text-sm">{b.name}</Link></li>))}
+                            {PAC_BRANDS.map(b => (<li key={b.slug}><a href={`/marques/${b.slug}`} className="text-amber-200 hover:text-accent transition-colors text-sm">{b.name}</a></li>))}
                         </ul>
                     </div>
                 </div>
@@ -65,9 +64,9 @@ export function Footer() {
                     <h4 className="text-base font-semibold text-white mb-4 font-heading">Installateurs par ville</h4>
                     <div className="flex flex-wrap gap-2">
                         {TOP_CITIES.map(c => (
-                            <Link key={c.slug} href={`/geothermie/${c.slug}`} className="text-xs bg-amber-900 hover:bg-amber-800 text-amber-200 hover:text-accent px-3 py-1.5 rounded-md border border-amber-800 hover:border-accent/50 transition-colors">{c.name}</Link>
+                            <a key={c.slug} href={`/geothermie/${c.slug}`} className="text-xs bg-amber-900 hover:bg-amber-800 text-amber-200 hover:text-accent px-3 py-1.5 rounded-md border border-amber-800 hover:border-accent/50 transition-colors">{c.name}</a>
                         ))}
-                        <Link href="/annuaire" className="text-xs bg-secondary/20 hover:bg-secondary/30 text-secondary px-3 py-1.5 rounded-md border border-secondary/30 transition-colors font-medium">Toutes les villes →</Link>
+                        <a href="/annuaire" className="text-xs bg-secondary/20 hover:bg-secondary/30 text-secondary px-3 py-1.5 rounded-md border border-secondary/30 transition-colors font-medium">Toutes les villes →</a>
                     </div>
                 </div>
                 <div className="border-t border-amber-900 pt-8 text-center text-amber-300 text-xs">
